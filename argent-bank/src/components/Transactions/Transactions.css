@@ -1,0 +1,22 @@
+.transaction-row:hover {
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+  
+.selected {
+    background-color: #e0e0e0;
+}
+  
+.details p {
+    margin: 0;
+    padding: 4px 8px;
+}
+
+.details div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 155px;
+}
+
+.fa-pencil{cursor: pointer;}

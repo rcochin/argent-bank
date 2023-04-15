@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 700;
+}
+  
+td {
+    padding: 15px 0px !important;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+  
+th {
+    color: white;
+    padding: 15px 0px !important;
+    border-left: none; 
+    border-right: none; 
+}
+  
+tbody {
+    background-color: white; 
+}
+
+td i:not(.fa-pencil){
+    position: absolute;
+    left: 10px;
+}
+
+.transactions .account-content-wrapper.cta{display: none;}
+
+.transactions .account-content-wrapper{text-align: center;}
