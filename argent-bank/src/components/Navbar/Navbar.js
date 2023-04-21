@@ -1,10 +1,18 @@
 import { Link, Outlet } from "react-router-dom"
 import logo from "../../assets/argentBankLogo.png";
 import "./Navbar.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../store/userSlice";
+
 
 function Navbar () {
     const user = useSelector((state) => state.user.user);
+    const dispatch = useDispatch();
+
+    function handleLogout() {
+      localStorage.clear();
+      dispatch(logout());
+    }
     return (
         <>
           <nav className="main-nav">
@@ -23,7 +31,7 @@ function Navbar () {
                     <i className="fa fa-user-circle"></i>
                     {user.firstName}
                   </Link>
-                  <Link to="#" className="main-nav-item">
+                  <Link to="/" className="main-nav-item" onClick={handleLogout}>
                     <i className="fa fa-sign-out"></i>
                     Logout
                   </Link>

@@ -9,7 +9,7 @@ function Transactions(props) {
       <tr
         className={`transaction-row ${selectedRow === props.index ? "selected" : ""}`}
         onClick={() => setSelectedRow(selectedRow === props.index ? null : props.index)}
-      >
+      > 
         <td className="chevron">
           <i className={`fa ${selectedRow === props.index ? "fa-chevron-up" : "fa-chevron-down"}`} />
           {props.date}
@@ -23,8 +23,8 @@ function Transactions(props) {
           <td colSpan="4">
             <div>
               <p>Transaction type : Electronic</p>
-              <p>Category : Food <i class="fa fa-pencil"></i></p>
-              <p>Notes : <i class="fa fa-pencil"></i></p>
+              <p>Category : Food <i className="fa fa-pencil"></i></p>
+              <p>Notes : <i className="fa fa-pencil"></i></p>
             </div>
           </td>
         </tr>

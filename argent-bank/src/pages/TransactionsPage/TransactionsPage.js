@@ -1,8 +1,9 @@
-import './TransactionsPage.css';
 import Account from '../../components/Account/Account';
 import Transactions from '../../components/Transactions/Transactions';
+import './TransactionsPage.css';
 
-function TransactionsPage () {
+function TransactionsPage () { 
+
     const transactionsTable = [
         {
           date: 'June 20th, 2020',
@@ -45,7 +46,7 @@ function TransactionsPage () {
     return (
         <main className='bg-dark transactions'>
             <Account 
-                type={"Argent Bank Checking (x8349)"}
+                type={"Argent Bank Checking (x8349)"} 
                 balance={"$2,082.79"}
                 description={"Available Balance"}
             />

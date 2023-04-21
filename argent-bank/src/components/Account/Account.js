@@ -1,4 +1,5 @@
 import './Account.css';
+import { Link } from 'react-router-dom';
 
 function Account ({type, balance, description}) {
     return (
@@ -9,7 +10,7 @@ function Account ({type, balance, description}) {
                 <p className="account-amount-description">{description}</p>
             </div>
             <div className="account-content-wrapper cta">
-                <button className="transaction-button">View transactions</button>
+                <Link to="/transactions" className='transaction-button'>View transactions</Link>
             </div>
         </section>
     )
