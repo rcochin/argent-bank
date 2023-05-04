@@ -1,0 +1,25 @@
+#form-update-name{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-update-name .input-container input{
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+#form-update-name .button-container button{
+    height: 40px;
+    width: 80px;
+    font-size: 18px;
+    margin: 9px;
+    padding: 5px;
+    border-radius: 0px;
+    color: white;
+    background-color: #00bc77;
+    border: solid 1px #00bc77;
+    font-weight: 600;
+}

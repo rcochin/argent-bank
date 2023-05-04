@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './EditNames.css';
 
 function EditNames({ firstName, lastName, onSave, onCancel }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -18,21 +19,25 @@ function EditNames({ firstName, lastName, onSave, onCancel }) {
 
   return isEditing ? (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={newFirstName}
-          onChange={(e) => setNewFirstName(e.target.value)}
-        />
-        <input
-          type="text"
-          value={newLastName}
-          onChange={(e) => setNewLastName(e.target.value)}
-        />
-        <button type="submit">Save</button>
-        <button type="button" onClick={handleCancel}>
-          Cancel
-        </button>
+      <form onSubmit={handleSubmit} id="form-update-name">
+        <div className="input-container">
+          <input
+            type="text"
+            value={newFirstName}
+            onChange={(e) => setNewFirstName(e.target.value)}
+          />
+          <input
+            type="text"
+            value={newLastName}
+            onChange={(e) => setNewLastName(e.target.value)}
+          />
+        </div>
+        <div className="button-container">
+          <button type="submit">Save</button>
+          <button type="button" onClick={handleCancel}>
+            Cancel
+          </button>
+        </div>
       </form>
     </>
   ) : (
