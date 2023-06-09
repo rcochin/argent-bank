@@ -1,0 +1,27 @@
+version: '3'
+services:
+  api:
+    build: ./API
+    volumes:
+      - ./API:/usr/src/app
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3001
+      - DATABASE_URL=mongodb://mongodb/argentBankDB
+    depends_on:
+      - mongodb
+  front:
+    build: ./argent-bank
+    volumes:
+      - ./argent-bank:/usr/src/app
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+  mongodb:
+    image: mongo
+    volumes:
+      - mongodb_data:/data/db
+volumes:
+  mongodb_data:
